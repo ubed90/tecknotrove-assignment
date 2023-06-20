@@ -1,0 +1,27 @@
+<section class="home grid">
+    <h2 class="home_heading">All Users</h2>
+    
+    <ng-container *ngIf="users$ | async as users; else loading" >
+        <div *ngIf="users.length !== 0; else noUsers" class="home_grid grid">
+            <app-card
+                *ngFor="let user of users"
+                [user]="user"
+            >
+            </app-card>
+        </div>
+
+
+        <ng-template #noUsers>
+            <h5 class="home_noUsers">No Users available</h5>
+        </ng-template>
+    </ng-container>
+
+
+    <ng-template #loading>
+        <app-loading>
+            <span>
+                Fetching Users...
+            </span>
+        </app-loading>
+    </ng-template>
+</section>

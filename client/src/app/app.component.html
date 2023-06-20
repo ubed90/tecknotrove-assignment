@@ -1,0 +1,9 @@
+<main class="container">
+  <app-header
+    [user]="user$ | async" 
+  ></app-header>
+
+  <section class="container-center">
+    <router-outlet></router-outlet>
+  </section>
+</main>

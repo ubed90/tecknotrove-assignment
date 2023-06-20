@@ -1,0 +1,31 @@
+@import 'variables';
+
+
+:host {
+    display: contents;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    margin-block-start: 1.6rem;
+
+    grid-template-rows: min-content 1fr;
+    gap: 1rem;
+
+
+    &_heading {
+        font-size: calc(1.6rem + 0.5vh + 0.5vw);
+        color: $color-primary;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+    }
+
+
+    &_grid {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-auto-rows: min-content;
+        gap: 1.6rem;
+    }
+}

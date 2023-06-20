@@ -1,0 +1,15 @@
+:host {
+    display: contents;
+}
+
+
+.container {
+
+    app-header {
+        grid-column: 1 / -1;
+    }
+
+    &-center {
+        grid-column: center-start / center-end;
+    }
+}

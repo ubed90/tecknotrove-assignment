@@ -1,0 +1,32 @@
+@import 'variables';
+
+.card {
+    padding: 1rem;
+    background-color: $color-primary;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    color: $color-white;
+
+
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: repeat(2, min-content);
+    align-items: center;
+
+    &:hover {
+        background: darken($color-primary, 5%);
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.45);
+        // border-color: darken(abstracts.$color-primary-light, 5%);
+    }
+
+    &_img {
+        grid-row: 1 / -1;
+        font-size: 4rem;
+        justify-self: center;
+    }
+
+    &_name {
+        font-size: 1.4rem;
+    }
+}

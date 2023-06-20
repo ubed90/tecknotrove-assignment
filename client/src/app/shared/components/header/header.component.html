@@ -1,0 +1,16 @@
+<header class="header container">
+  <nav class="header_nav flex justify-between">
+    <a [routerLink]="['/']">
+      <h1 class="header_logo">Tecknotrove</h1>
+    </a>
+
+    <div *ngIf="user" class="header_links flex align-center">
+      <a (click)="$event.preventDefault()" class="header_link btn btn-primary"><span class="material-symbols-outlined">
+        account_circle
+        </span>{{user.username}}</a>
+      <a (click)="logout()" class="header_link btn btn-primary outlined"
+        ><span class="material-symbols-outlined"> logout </span>Logout</a
+      >
+    </div>
+  </nav>
+</header>
